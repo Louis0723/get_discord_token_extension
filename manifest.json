@@ -1,0 +1,22 @@
+{
+  "name": "Hello, Discord Token!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {},
+  "content_scripts": [
+    {
+      "matches": ["file://*/*", "http://*/*", "https://*/*"],
+      "js": [
+          "./dist/main.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["dist/hack.js"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ]
+}
